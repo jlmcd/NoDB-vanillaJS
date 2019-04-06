@@ -51,26 +51,33 @@ box-sizing: border-box
   font-family: 'Raleway', sans-serif;
   color: #0E1428;
 }
+*::selection {
+  background: #D6F49DAA;
+}
 body, html {
   background: #efefef;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
   background-color: #F0A202;
   color: #0E1428;
   font-weight: 100;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 0 20px #66542C;
+  padding: 20px 50px;
 }
-header > h1 {
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+header h1 {
   font-weight: 700;
   font-size: 2rem;
   cursor: default;
 }
-header > .logo {
+header .logo {
   cursor: default;
 }
 #assignments {
@@ -78,7 +85,9 @@ header > .logo {
 }
 #inputs {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 input {
   background: #efefef;
@@ -133,4 +142,21 @@ button:hover {
   background: #D6F49D;
   color: #0E1428;
   box-shadow: 0 0 5px #fff, inset 0 0 5px #bfb;
+}
+
+.list-item {
+  border: 2px solid #0E1428;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 10px auto;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+.list-item > h3 h4 {
+  margin: 0 10px;
+  min-width: 25%;
+}
+.list-item > h3:nth-last-of-type(1) {
+  min-width: 50%;
 }

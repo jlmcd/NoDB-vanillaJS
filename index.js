@@ -65,8 +65,13 @@ function addToList() {
 
 
 function removeFromList(el) {
+  // take the id from button
   const id = +el.id.split('').splice(7).join('')
+
+  // use the id to get the item with the same id and remove it
   document.getElementById(`item-${id}`).remove()
+
+  // use the id to find the item in the array with the same id and remove it
   const index = assignmentsArr.findIndex(item => item.id === id)
-  assignmentsArr.splice(index, 1)
+  return assignmentsArr.splice(index, 1)
 }
